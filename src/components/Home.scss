@@ -1,9 +1,5 @@
 $primary: #F2994A;
 $secondary: #4C27BF;
-$dark: #242424;
-
-$text-light: rgba(0, 0, 0, 0.74);
-$text-gray: rgba(0, 0, 0, 0.51);
 
 a{
     text-decoration: none;
@@ -28,16 +24,9 @@ header{
             padding: 12px 16px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             &.active{
                 background-color: white;
                 color: inherit;
-            }
-            .count{
-                padding: 5px 14px;
-                border-radius: 14px;
-                background-color: #333333;
-                color: white;
             }
         }
     }
@@ -45,7 +34,7 @@ header{
       .add {
         width: 154px;
         height: 36px;
-        background-color: $dark;
+        background-color: $secondary;
         border: none;
         color: white;
         border-radius: 5px;
@@ -58,8 +47,6 @@ header{
         >.title{
             margin: 24px 0;
             font-size: 1em;
-            color: $text-gray;
-            font-weight: normal;
         }
     }
 }
