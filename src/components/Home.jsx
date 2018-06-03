@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 import './Home.scss'
 
 class Home extends Component {
     constructor(props){
         super(props)
+
+        this.state = {
+
+        }
+    }
+    componentDidMount(){
+      axios.post('http://4943f94a.ngrok.io/api/organizations', {"name":"pesadito"}).then (res => {
+        console.log(res);
+        console.log(res.data);
+      }            )
     }
     render(){
         return (
