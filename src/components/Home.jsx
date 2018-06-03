@@ -13,11 +13,9 @@ class Home extends Component {
                     <div className="tabs">
                         <button className="active">
                             <span>Issues del area</span>
-                            <span className="count">3</span>
                         </button>
                         <button>
                             <span>Issues externos</span>
-                            <span className="count">1</span>
                         </button>
                     </div>
                     <div className="actions">
