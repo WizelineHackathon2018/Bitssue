@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import './Home.scss'
+import env from './env'
 
 class Home extends Component {
     constructor(props){
         super(props)
 
         this.state = {
-
+            team_list: []
         }
     }
     componentDidMount(){
-      axios.get('/organizations', ).then (res => {
-        console.log(res);
-        console.log(res.data);
-      }            )
+      axios.get(env.servidor_url + 'teams/1/issues').then (res => {
+        this.setState({ team_list: res.data })
+      })
     }
     render(){
         return (
@@ -23,7 +23,7 @@ class Home extends Component {
                     <div className="tabs">
                         <button className="active">
                             <span>Issues del area</span>
-                            <span className="count">3</span>
+                            <span className="count">{this.state.team_list.length}</span>
                         </button>
                         <button>
                             <span>Issues externos</span>
@@ -38,20 +38,24 @@ class Home extends Component {
                     <div className="list">
                         <h1 className="title">Nuevos</h1>
                         <ul>
-                            <li className="card">
-                                <div className="content">
-                                    <div className="avatar">
-                                        <img src="" alt=""/>
-                                    </div>
-                                    <div className="text">
-                                        <a href="">¿Cuál es el formato de /users del servidor?</a>
-                                        <span>Upload 02/06/18</span>
-                                    </div>
-                                    <div className="count">
-                                        <span>0 replys</span>
-                                    </div>
-                                </div>
-                            </li>
+                            {
+                                this.state.team_list.map( i => (
+                                    <li className="card" key={i.id}>
+                                        <div className="content">
+                                            <div className="avatar">
+                                                <img src="" alt=""/>
+                                            </div>
+                                            <div className="text">
+                                                <a href="">{i.title}</a>
+                                                <span>{i.updated_at}</span>
+                                            </div>
+                                            <div className="count">
+                                                <span>{i.answeres.length} replys</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </section>
