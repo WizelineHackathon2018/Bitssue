@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import './Home.scss'
 import env from './env'
@@ -39,14 +40,14 @@ class Home extends Component {
                         <h1 className="title">Nuevos</h1>
                         <ul>
                             {
-                                this.state.team_list.map( i => (
+                                this.state.team_list.map( (i, index) => (
                                     <li className="card" key={i.id}>
                                         <div className="content">
                                             <div className="avatar">
-                                                <img src="" alt=""/>
+                                                <img src={`https://randomuser.me/api/portraits/thumb/men/${i.id}.jpg`} alt=""/>
                                             </div>
                                             <div className="text">
-                                                <a href="">{i.title}</a>
+                                                <Link to={`detail?id=${i.id}`}>{i.title}</Link>
                                                 <span>{i.updated_at}</span>
                                             </div>
                                             <div className="count">

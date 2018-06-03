@@ -83,7 +83,7 @@ $text-gray: rgba(0, 0, 0, 0.51);
             width: 152px;
             height: 36px;
             color: white;
-            background-color: $primary;
+            background-color: $secondary;
             border: none;
             border-radius: 5px;
             margin-left: 32px;
@@ -93,6 +93,7 @@ $text-gray: rgba(0, 0, 0, 0.51);
         border: 1px solid rgba(0, 0, 0, 0.09);
         border-radius: 5px;
         padding: 0 24px;
+        margin-bottom: 8px;
         .content{
             display: flex;
             .avatar{

@@ -1,5 +1,5 @@
 const env = {
-  servidor_url:  "http://4943f94a.ngrok.io/api/"
+  servidor_url:  "http://b272587a.ngrok.io/api/"
 }
 
 export default env
