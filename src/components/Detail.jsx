@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import './Detail.scss'
 
@@ -14,6 +15,9 @@ class Detail extends Component {
             <div>
                 <div className="background-head"></div>
                 <div className="card-detail">
+                    <div className="action">
+                        <Link to="/"><i className="material-icons">arrow_back</i></Link>
+                    </div>
                     <div className="question">
                         <div className="avatar">
                             <img src="" alt=""/>
