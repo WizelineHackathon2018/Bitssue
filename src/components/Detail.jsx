@@ -17,7 +17,7 @@ class Detail extends Component {
         document.body.style.backgroundColor = "#F9F9F9"
 
         let id = this.props.location.search.split('=')[1]
-        axios.get(env.servidor_url + 'teams/1/issues/' + id).then(res => {
+        axios.get(env.servidor_url + 'issues/' + id).then(res => {
             this.setState({ data: res.data })
         })
     }
