@@ -12,6 +12,8 @@ class Detail extends Component {
         this.state = {
             data: undefined
         }
+
+        this.handleResponseIssue = this.handleResponseIssue.bind(this)
     }
     componentDidMount(){
         document.body.style.backgroundColor = "#F9F9F9"
@@ -23,6 +25,21 @@ class Detail extends Component {
     }
     componentWillUnmount(){
         document.body.style.backgroundColor = ""
+    }
+    handleResponseIssue(){
+        let responseText = document.getElementById('responseText').value
+        let id = this.props.location.search.split('=')[1]
+
+        axios.post(env.servidor_url + 'answeres', {
+            content: responseText,
+            memberId: 1,
+            idIssue: id
+        }).then( res => {
+            responseText = ""
+            axios.get(env.servidor_url + 'issues/' + id).then(res => {
+                this.setState({ data: res.data })
+            })
+        })
     }
     render(){
         return (
@@ -70,8 +87,8 @@ class Detail extends Component {
                             </ul>
                         </div>
                         <div className="submit">
-                            <input type="text" placeholder="Escribe una respuesta"/>
-                            <button>Enviar respuesta</button>
+                            <input id="responseText" type="text" placeholder="Escribe una respuesta"/>
+                            <button onClick={this.handleResponseIssue}>Enviar respuesta</button>
                         </div>
                     </div>
                 :
