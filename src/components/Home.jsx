@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 import './Home.scss'
 
 class Home extends Component {
     constructor(props){
         super(props)
+
+        this.state = {
+
+        }
+    }
+    componentDidMount(){
+      axios.post('http://4943f94a.ngrok.io/api/organizations', {"name":"pesadito"}).then (res => {
+        console.log(res);
+        console.log(res.data);
+      }            )
     }
     render(){
         return (
@@ -13,11 +24,9 @@ class Home extends Component {
                     <div className="tabs">
                         <button className="active">
                             <span>Issues del area</span>
-                            <span className="count">3</span>
                         </button>
                         <button>
                             <span>Issues externos</span>
-                            <span className="count">1</span>
                         </button>
                     </div>
                     <div className="actions">
