@@ -26,6 +26,14 @@ header{
         }
     }
     .actions{
+      .add {
+        width: 200px;
+        height: 36px;
+        background-color: #323232;
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
     }
 }
 .list-content{
@@ -48,6 +56,13 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
+            img{
+              width: 24px;
+              height: 24px;
+              background-color: gray;
+              border-radius: 50%;
+            }
+            padding-right: 16px;
         }
         .text{
             display: flex;
