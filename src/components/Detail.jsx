@@ -7,7 +7,8 @@ class Detail extends Component {
     render(){
         return (
             <div>
-                <h1>Detalle</h1>
+                <div></div>
+                <div className="card"></div>
             </div>
         )
     }
