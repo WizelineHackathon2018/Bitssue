@@ -12,7 +12,7 @@ class Detail extends Component {
     render(){
         return (
             <div>
-                <div></div>
+                <div className="background-head"></div>
                 <div className="card-detail">
                     <div className="question">
                         <div className="avatar">
@@ -44,6 +44,10 @@ class Detail extends Component {
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div className="submit">
+                        <input type="text"/>
+                        <button>Enviar respuesta</button>
                     </div>
                 </div>
             </div>
