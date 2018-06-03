@@ -35,7 +35,7 @@ class Detail extends Component {
             memberId: 1,
             idIssue: id
         }).then( res => {
-            responseText = ""
+            document.getElementById('responseText').value = ""
             axios.get(env.servidor_url + 'issues/' + id).then(res => {
                 this.setState({ data: res.data })
             })
