@@ -1,0 +1,88 @@
+$primary: #F2994A;
+$secondary: #4C27BF;
+$dark: #242424;
+
+$text-light: rgba(0, 0, 0, 0.74);
+$text-gray: rgba(0, 0, 0, 0.51);
+
+.card-detail{
+    margin: 32px 30px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    > .question{
+        display: flex;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        border-radius: 5px;
+        margin-top: 82px;
+        padding: 24px;
+        .avatar{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            img{
+              width: 24px;
+              height: 24px;
+              background-color: gray;
+              border-radius: 50%;
+            }
+            padding-right: 20px;
+        }
+        .content{
+            .text{
+                display: flex;
+                flex-direction: column;
+                .question{
+                    font-size: 1.25em;
+                }
+                .date{
+                    font-size: 0.75em;
+                    margin-top: 8px;
+                    color: $text-gray;
+                }
+            }
+            .comments{
+                margin-top: 32px;
+            }
+        }
+    }
+    > .responses {
+        padding-top: 32px;
+    }
+    .response{
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        border-radius: 5px;
+        padding: 0 24px;
+        .content{
+            display: flex;
+            .avatar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                  width: 24px;
+                  height: 24px;
+                  background-color: gray;
+                  border-radius: 50%;
+                }
+                padding-right: 20px;
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .count{
+                margin-left: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 8px;
+                font-size: 0.75em;
+                color: $text-gray;
+            }
+        }
+    }
+}
