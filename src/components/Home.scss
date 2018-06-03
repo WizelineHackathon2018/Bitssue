@@ -1,0 +1,65 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    height: 72px;
+    background: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 39px;
+    .tabs{
+        align-self: flex-end;
+        display: flex;
+        button{
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 5px 5px 0 0;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            &.active{
+                background-color: white;
+            }
+        }
+    }
+    .actions{
+    }
+}
+.list-content{
+    padding: 0 55px;
+    >.list{
+        >.title{
+            margin: 24px 0;
+            font-size: 1em;
+        }
+    }
+}
+.card{
+    background: #FBFBFB;
+    border-radius: 5px;
+    .content{
+        display: flex;
+        height: 72px;
+        padding: 0 16px;
+        .avatar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .count{
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 16px;
+        }
+    }
+}
