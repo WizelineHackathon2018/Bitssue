@@ -67,6 +67,10 @@ header{
     background: #FBFBFB;
     border-radius: 5px;
     margin-bottom: 8px;
+    border-left: 4px solid #D1D1D1;
+    &.release{
+        border-left: 4px solid #31CA3A;
+    }
     .content{
         display: flex;
         height: 72px;
@@ -92,6 +96,9 @@ header{
               font-size: 12px;
               color: $text-light;
             }
+            a:hover{
+                color: #2D9CDB;
+            }
         }
         .count{
             margin-left: auto;
@@ -101,6 +108,70 @@ header{
             padding: 0 16px;
             color: $text-light;
             font-style: italic;
+        }
+    }
+}
+
+.add-isssue-modal-blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.34);
+}
+.add-isssue-modal{
+    position: fixed;
+    top: 18%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
+    background-color: white;
+    padding: 32px;
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        input, textarea{
+            font-size: 1em;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            border-radius: 5px;
+            font-size: 1em;
+            padding: 8px;
+            margin: 8px 0;
+            &:last-child{
+                height: 60px;
+            }
+        }
+    }
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 48px;
+        span{
+            color: $text-gray;
+        }
+        .toggle{
+            display: flex;
+            align-items: center;
+            select{
+                font-size: 1em;
+                border: 1px solid rgba(0, 0, 0, 0.09);
+                border-radius: 5px;
+                font-size: 1em;
+                padding: 8px;
+                margin: 0 8px;
+            }
+        }
+        input[type="submit"] {
+            width: 152px;
+            height: 36px;
+            color: white;
+            background-color: $secondary;
+            border: none;
+            border-radius: 5px;
+            margin-left: 32px;
         }
     }
 }
