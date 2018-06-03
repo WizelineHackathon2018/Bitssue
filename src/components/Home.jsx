@@ -68,7 +68,7 @@ class Home extends Component {
                         <ul>
                             {
                                 this.state.team_list.priority.map( (i, index) => (
-                                    <li className="card release" key={i.id}>
+                                    <li className={`card ${ (i.updated_at.search('2018-06-03') != -1) ? 'release' : '' }`} key={i.id}>
                                         <div className="content">
                                             <div className="avatar">
                                                 <img src={`https://randomuser.me/api/portraits/thumb/men/${i.id}.jpg`} alt=""/>
