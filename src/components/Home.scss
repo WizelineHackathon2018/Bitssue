@@ -1,10 +1,13 @@
+$primary: #F2994A;
+$secondary: #4C27BF;
+
 a{
     text-decoration: none;
     color: inherit;
 }
 header{
     height: 72px;
-    background: #F0F0F0;
+    background: $primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +17,8 @@ header{
         display: flex;
         button{
             width: 200px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.48);
+            color: white;
             border: none;
             border-radius: 5px 5px 0 0;
             padding: 12px 16px;
@@ -22,10 +26,19 @@ header{
             justify-content: space-between;
             &.active{
                 background-color: white;
+                color: inherit;
             }
         }
     }
     .actions{
+      .add {
+        width: 154px;
+        height: 36px;
+        background-color: $secondary;
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
     }
 }
 .list-content{
@@ -48,6 +61,13 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
+            img{
+              width: 24px;
+              height: 24px;
+              background-color: gray;
+              border-radius: 50%;
+            }
+            padding-right: 16px;
         }
         .text{
             display: flex;

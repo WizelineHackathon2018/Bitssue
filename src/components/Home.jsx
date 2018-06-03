@@ -19,7 +19,7 @@ class Home extends Component {
                         </button>
                     </div>
                     <div className="actions">
-                        <button>Agregar Issue</button>
+                        <button className="add">Agregar Issue</button>
                     </div>
                 </header>
                 <section className="list-content">
